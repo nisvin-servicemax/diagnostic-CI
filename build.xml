@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project basedir="." default="build" name="diagnostic-fw">
+<project basedir="." default="build" name="diagnostic-CI">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../../Applications/Eclipse.app/Contents/Eclipse/"/>
     <property name="junit.output.dir" value="junittest"/>
@@ -13,7 +13,7 @@
     </path>
     <path id="EAR Libraries.libraryclasspath"/>
     
-    <path id="diagnostic-fw.classpath">
+    <path id="diagnostic-CI.classpath">
         <pathelement location="bin"/>
         <path refid="Web App Libraries.libraryclasspath"/>
     </path>
@@ -41,7 +41,7 @@
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
             <src path="src"/>
             <src path="junit"/>
-            <classpath refid="diagnostic-jenkins.classpath"/>
+            <classpath refid="diagnostic-CI.classpath"/>
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
